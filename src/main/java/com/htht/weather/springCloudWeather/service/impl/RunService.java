@@ -92,7 +92,7 @@ public class RunService {
         HttpHeaders headers = new HttpHeaders();
         MultiValueMap<String, String> map= new LinkedMultiValueMap<String, String>();
         map.add("id", "100");
-        map.add("name", "getTestPostParam");
+        map.add("name", "你好");
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<MultiValueMap<String, String>>(map, headers);
 
 

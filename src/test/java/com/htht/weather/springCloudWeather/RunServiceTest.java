@@ -21,9 +21,9 @@ public class RunServiceTest {
     @Test
     public void getTest() throws URISyntaxException {
        // runService.getTestGet();
-       runService.getTestPost();
-        //runService.getTestPostParam();
-       // runService.getTestPut();
+       //runService.getTestPost();
+       // runService.getTestPostParam();
+        runService.getTestPut();
        // runService.getTestDel();
     }
 }

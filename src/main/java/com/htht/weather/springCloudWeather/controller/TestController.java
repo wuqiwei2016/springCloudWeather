@@ -43,7 +43,7 @@ public class TestController {
     public String testPostParam(@RequestParam("id") String id, @RequestParam("name") String name){
         System.out.println("Post id:"+id);
         System.out.println("Post name:"+name);
-        return "post succ";
+        return "你好";
     }
 
 
