@@ -1,6 +1,7 @@
 package com.htht.weather.springCloudWeather.vo;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
