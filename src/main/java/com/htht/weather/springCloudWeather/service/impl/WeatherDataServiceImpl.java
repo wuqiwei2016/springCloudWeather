@@ -64,4 +64,28 @@ public class WeatherDataServiceImpl implements WeatherDataService{
         }
         return resp;
     }
+
+    @Override
+    public void syncDateByCityId(String cityId) {
+        String uri = WEATHER_URI + "citykey=" + cityId;
+        this.saveWeatherData(uri);
+    }
+
+    /**
+     * 把天气数据放在缓存
+     */
+    private void saveWeatherData(String uri){
+        String key = uri;
+        String strBody = null;
+        ValueOperations<String, String> ops = stringRedisTemplate.opsForValue();
+
+        //调用服务接口来获取
+        ResponseEntity<String>  resString  = restTemplate.getForEntity(uri,String.class);
+
+        if(resString.getStatusCodeValue() == 200){
+            strBody = resString.getBody();
+        }
+        // 数据写入缓存
+        ops.set(key, strBody, TIME_OUT, TimeUnit.SECONDS);
+    }
 }
