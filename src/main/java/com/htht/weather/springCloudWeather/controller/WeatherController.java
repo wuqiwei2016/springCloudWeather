@@ -29,7 +29,7 @@ public class WeatherController {
     }
     @GetMapping("/cityName/{cityName}")
     public WeatherResponse getWeatherByCityName(@PathVariable("cityName") String cityName){
-        return  weatherDataService.getWeatherByCityName(cityName);
+        return  weatherDataService.getDataByCityName(cityName);
     }
     @RequestMapping("/json")
     public Object genJson() throws JSONException {

@@ -20,7 +20,7 @@ public interface WeatherDataService {
      *
      * @return
      */
-    WeatherResponse getWeatherByCityName(String cityName);
+    WeatherResponse getDataByCityName(String cityName);
 
     /**
      * 根据城市id来同步天气
